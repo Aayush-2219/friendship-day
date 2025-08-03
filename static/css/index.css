@@ -1,0 +1,85 @@
+.bokeh-bg {
+    background: linear-gradient(135deg, #bf5bce, #4091ad, #8688b1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* send to bg */
+    overflow: hidden;
+}
+
+.main {
+  position: absolute; /* or fixed if you want it stuck even while scrolling */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centers it perfectly */
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 10; /* make sure it's above bokeh */
+  max-width: 90vw;
+  max-height: 90vh;
+  width: 250px;
+  height: 300px;
+  opacity: 40%;
+  font-family: sans-serif;
+  font-size: 18px;
+  overflow: auto; /* just in case content gets long */
+  padding-top: 100px;
+}
+
+.frnd{
+    opacity: 100% !important;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1); /* soft white */
+    filter: blur(9px); /* this gives the bokeh blur */
+    animation: float 20s infinite;
+}
+
+/* You can customize position/size with nth-child */
+.circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 2%;
+    background: rgba(255, 100, 150, 0.15);
+}
+
+.circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 70%;
+    background: rgba(100, 200, 255, 0.12);
+}
+
+.circle:nth-child(5) {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    left: 1%;
+    background: rgba(213, 165, 21, 0.12);
+}
+
+.circle:nth-child(3) {
+    width: 250px;
+    height: 250px;
+    top: 70%;
+    left: 30%;
+    background: rgba(255, 255, 100, 0.1);
+}
+
+.circle:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    top: 7%;
+    left: 65%;
+    background: rgba(150, 255, 150, 0.1);
+}
